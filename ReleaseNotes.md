@@ -1,4 +1,10 @@
 # TopJava Release Notes
+### Topjava 12
+- обновили версии: Spring 5.x, Spring Data 2.x, Ehcache 3.x
+- добавилось [видео решений HW0 с одним проходом](https://drive.google.com/open?id=0B9Ye2auQ_NsFcUVfU1hmYUx3Rzg)
+- поправил видео [Обзор Spring Framework. Spring Context](https://drive.google.com/file/d/1fBSLGEbc7YXBbmr_EwEHltCWNW_pUmIH). Дописал про Constructor injection.
+- заменил видео про тетсирование сервисов. Вместо самодельных матчеров стали использовать [AssertJ](http://joel-costigliola.github.io/assertj/index.html). Видео [Тестирование UserService через AssertJ](https://drive.google.com/open?id=1SPMkWMYPvpk9i0TA7ioa-9Sn1EGBtClD), время 1:53
+
 ### Topjava 11
 - добавил
   - доп. решение HW1 через одним return и O(N)
