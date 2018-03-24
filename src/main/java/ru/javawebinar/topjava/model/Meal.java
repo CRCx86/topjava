@@ -37,19 +37,23 @@ public class Meal extends AbstractBaseEntity {
     public static final String GET_BETWEEN = "Meal.getBetween";
 
     @Column(name = "date_time", nullable = false)
-    @NotNull(groups = {View.ValidatedUI.class, Default.class})
-    @JsonView(View.JsonREST.class)
+//    @NotNull(groups = {View.ValidatedUI.class, Default.class})
+    @NotNull
+//    @JsonView(View.JsonREST.class)
     private LocalDateTime dateTime;
 
     @Column(name = "description", nullable = false)
-    @NotBlank(groups = {View.ValidatedUI.class, Default.class})
+//    @NotBlank(groups = {View.ValidatedUI.class, Default.class})
+    @NotBlank
     @Size(min = 2, max = 120)
     @SafeHtml(groups = {View.Web.class})
     private String description;
 
     @Column(name = "calories", nullable = false)
-    @Range(min = 10, max = 5000, groups = {View.ValidatedUI.class, Default.class})
-    @NotNull(groups = {View.ValidatedUI.class, Default.class})
+//    @Range(min = 10, max = 5000, groups = {View.ValidatedUI.class, Default.class})
+    @Range(min = 10, max = 5000)
+//    @NotNull(groups = {View.ValidatedUI.class, Default.class})
+    @NotNull
     private Integer calories;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -114,7 +118,8 @@ public class Meal extends AbstractBaseEntity {
 
 
     @JsonGetter
-    @JsonView(View.JsonUI.class)
+//    @JsonView(View.JsonUI.class)
+    @JsonView()
     @JsonFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
     public LocalDateTime getDateTimeUI() {
         return dateTime;

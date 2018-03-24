@@ -11,7 +11,7 @@ import java.util.Objects;
 
 public class MealWithExceed extends BaseTo {
 
-    @JsonView(View.JsonREST.class)
+//    @JsonView(View.JsonREST.class)
     private final LocalDateTime dateTime;
 
     private final String description;
@@ -62,7 +62,7 @@ public class MealWithExceed extends BaseTo {
     }
 
     @JsonGetter
-    @JsonView(View.JsonUI.class)
+//    @JsonView(View.JsonUI.class)
     @JsonFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
     public LocalDateTime getDateTimeUI() {
         return dateTime;
